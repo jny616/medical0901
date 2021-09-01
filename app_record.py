@@ -44,10 +44,10 @@ def reply_text_message(event):
         reply = False
         #加入紀錄
         if not reply:
-            reply = PhoebeTalks.insert_record(event)
+            reply = admin.insert_record(event)
         #查看文字紀錄
         if not reply:
-            reply = PhoebeTalks.find_record_data(event)
+            reply = views.find_record_data(event)
         #查看視覺化紀錄
         if not reply:
             reply = PhoebeTalks.get_visualize(event)
